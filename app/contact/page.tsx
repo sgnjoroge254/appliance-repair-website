@@ -14,7 +14,7 @@ export default function ContactPage() {
           <div>
             <dt className="font-mono text-xs text-ink/50">WhatsApp</dt>
             <dd className="mt-1">
-              
+        <a
                 href={businessInfo.whatsappUrl}
                 className="text-ink underline decoration-amber underline-offset-4 hover:text-amber"
               >
