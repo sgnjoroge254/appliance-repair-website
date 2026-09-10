@@ -9,7 +9,9 @@ export default function Home() {
       <section className="border-b border-steelline bg-steel">
         <div className="mx-auto grid max-w-6xl gap-10 px-6 py-20 md:grid-cols-[1.2fr_1fr] md:items-center">
           <div>
-            <p className="font-mono text-xs uppercase tracking-wide text-ink/50">Appliance repair, done right the first time</p>
+          <p className="mt-5 max-w-md font-body text-base text-ink/70">
+              From faulty circuit boards to complex diagnostics, we repair what others replace — saving you the cost of a new device and keeping working electronics out of the landfill.
+            </p>
             <h1 className="mt-4 font-head text-4xl font-extrabold leading-[1.05] text-ink sm:text-5xl">
               {businessInfo.tagline}
             </h1>
