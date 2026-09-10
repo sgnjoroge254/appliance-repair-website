@@ -10,7 +10,7 @@ export type Service = {
 
 export const businessInfo = {
   name: "Atomic Vitality Tech Lab",
-  tagline: "[Short tagline — e.g. Component-level electronics repair and diagnostics you can trust]",
+tagline: "Component-level electronics repair and diagnostics you can trust",
   phone: "0710 910 088",
   whatsappUrl: "https://wa.link/6tjkiv",
   email: "atomicvitality@gmail.com",
