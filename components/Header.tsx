@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import Link from "next/link";
+import Image from "next/image";
 import { businessInfo } from "@/lib/services";
 
 const navLinks = [
@@ -17,8 +18,11 @@ export default function Header() {
   return (
     <header className="sticky top-0 z-50 border-b border-steelline bg-steel/95 backdrop-blur">
       <div className="mx-auto flex max-w-6xl items-center justify-between px-6 py-4">
-        <Link href="/" className="font-head text-lg font-bold tracking-tight text-ink" onClick={() => setOpen(false)}>
-          {businessInfo.name}
+        <Link href="/" className="flex items-center gap-3" onClick={() => setOpen(false)}>
+          <Image src="/1789005050.png" alt={businessInfo.name} width={36} height={36} className="h-9 w-9 object-contain" />
+          <span className="font-head text-lg font-bold tracking-tight text-ink">
+            {businessInfo.name}
+          </span>
         </Link>
 
         <nav className="hidden items-center gap-8 md:flex">
