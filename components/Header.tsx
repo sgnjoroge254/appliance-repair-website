@@ -16,10 +16,10 @@ export default function Header() {
 
   return (
     <header className="sticky top-0 z-50 border-b border-steelline bg-steel/95 backdrop-blur">
-      <div className="mx-auto flex max-w-6xl items-center justify-between px-6 py-4">
+      <div className="mx-auto flex max-w-6xl items-center justify-between px-6 py-3">
         <Link href="/" className="flex items-center gap-3" onClick={() => setOpen(false)}>
-          <img src="/1789005050.png" alt={businessInfo.name} className="h-9 w-9 object-contain" />
-          <span className="font-head text-lg font-bold tracking-tight text-ink">
+          <img src="/1789005050.png" alt={businessInfo.name} className="h-14 w-14 object-contain sm:h-16 sm:w-16" />
+          <span className="font-head text-lg font-bold tracking-tight text-ink sm:text-xl">
             {businessInfo.name}
           </span>
         </Link>
