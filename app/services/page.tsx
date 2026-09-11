@@ -5,6 +5,7 @@ import ServiceCard from "@/components/ServiceCard";
 export default function Home() {
   return (
     <>
+      {/* Hero: styled as a work order / service ticket */}
       <section className="border-b border-steelline bg-steel">
         <div className="mx-auto grid max-w-6xl gap-10 px-6 py-20 md:grid-cols-[1.2fr_1fr] md:items-center">
           <div>
@@ -25,6 +26,7 @@ export default function Home() {
             </div>
           </div>
 
+          {/* Ticket panel */}
           <div className="border border-steelline bg-white p-6 font-mono text-sm">
             <div className="flex items-center justify-between border-b border-steelline pb-3">
               <span className="text-ink/50">JOB TICKET</span>
@@ -52,6 +54,7 @@ export default function Home() {
         </div>
       </section>
 
+      {/* Services preview */}
       <section className="mx-auto max-w-6xl px-6 py-20">
         <div className="flex items-end justify-between gap-6">
           <h2 className="font-head text-2xl font-bold text-ink sm:text-3xl">What we do</h2>
@@ -66,6 +69,7 @@ export default function Home() {
         </div>
       </section>
 
+      {/* Closing CTA banner */}
       <section className="border-t border-steelline bg-ink">
         <div className="mx-auto flex max-w-6xl flex-col items-start gap-6 px-6 py-16 sm:flex-row sm:items-center sm:justify-between">
           <div>
