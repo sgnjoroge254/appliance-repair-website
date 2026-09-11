@@ -18,6 +18,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   return (
     <html lang="en" suppressHydrationWarning>
       <body className={`${archivo.variable} ${plexSans.variable} ${plexMono.variable} font-body`} suppressHydrationWarning>
+        <Header />
         <main>{children}</main>
         <Footer />
       </body>
