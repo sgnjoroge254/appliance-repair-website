@@ -17,8 +17,7 @@ export const metadata: Metadata = {
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <body className={`${archivo.variable} ${plexSans.variable} ${plexMono.variable} font-body`}>
-        <Header />
+      <body className={`${archivo.variable} ${plexSans.variable} ${plexMono.variable} font-body`} suppressHydrationWarning>
         <main>{children}</main>
         <Footer />
       </body>
