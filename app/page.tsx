@@ -20,22 +20,25 @@ const industries = [
 export default function Home() {
   return (
     <>
-      <section className="bg-[#081722] px-6 py-24 sm:py-32">
+      <section className="bg-[#081722] px-6 py-16 sm:py-24">
+        <div className="mx-auto mb-16 max-w-6xl">
+          <img src="/atomic-vitality-logo.jpe" alt="Atomic Vitality Tech Lab" className="h-auto w-full max-w-2xl object-contain" />
+        </div>
         <div className="mx-auto grid max-w-6xl gap-16 lg:grid-cols-[1.15fr_.85fr] lg:items-end">
           <div>
-            <p className="font-mono text-xs uppercase tracking-[0.24em] text-amber">Advanced electronics engineering</p>
+            <p className="font-mono text-xs uppercase tracking-[0.24em] text-amber">Atomic Vitality Tech Lab</p>
             <h1 className="mt-6 max-w-3xl font-head text-5xl font-extrabold leading-[0.98] text-white sm:text-7xl">
-              Engineering beyond replacement.
+              Repairs that keep your technology working.
             </h1>
             <p className="mt-7 max-w-2xl font-body text-lg leading-relaxed text-slate-300">
-              {businessInfo.tagline}. Failure analysis, component-level diagnostics, repair, rework, and refurbishment for equipment worth restoring.
+              {businessInfo.tagline}. We inspect the fault, explain what we find, and restore electronics with careful component-level work whenever repair is practical.
             </p>
             <div className="mt-10 flex flex-wrap gap-4">
               <Link href="/book-repair" className="bg-amber px-6 py-3 font-body text-sm font-medium text-ink hover:bg-white">
-                Request technical assessment
+                Tell us about your repair
               </Link>
               <Link href="/services" className="border border-white/30 px-6 py-3 font-body text-sm font-medium text-white hover:bg-white/10">
-                Explore capabilities
+                View our services
               </Link>
             </div>
           </div>
@@ -48,7 +51,7 @@ export default function Home() {
       <section className="bg-[#0f1d2b] px-6 py-20">
         <div className="mx-auto max-w-6xl">
           <p className="font-mono text-xs uppercase tracking-[0.24em] text-amber">Capabilities</p>
-          <h2 className="mt-3 font-head text-3xl font-bold text-white sm:text-4xl">Engineering capabilities</h2>
+          <h2 className="mt-3 font-head text-3xl font-bold text-white sm:text-4xl">How we can help</h2>
           <div className="mt-10 grid gap-px bg-white/10 sm:grid-cols-2 lg:grid-cols-3">
             {services.map((service) => (
               <article key={service.slug} className="bg-[#0f1d2b] p-7">
@@ -63,7 +66,7 @@ export default function Home() {
             <article className="bg-[#0f1d2b] p-7">
               <p className="font-mono text-xs text-slate-500">04</p>
               <h3 className="mt-8 font-head text-xl font-bold text-white">Refurbishment</h3>
-              <p className="mt-3 font-body text-sm leading-relaxed text-slate-300">[Add your refurbishment and restoration offering here.]</p>
+              <p className="mt-3 font-body text-sm leading-relaxed text-slate-300">[Add another service you offer, such as equipment restoration or preventive maintenance.]</p>
               <Link href="/contact" className="mt-6 inline-block font-mono text-xs uppercase tracking-wide text-amber hover:text-white">
                 Learn more →
               </Link>
@@ -75,7 +78,7 @@ export default function Home() {
       <section className="bg-[#122334] px-6 py-20">
         <div className="mx-auto max-w-6xl">
           <p className="font-mono text-xs uppercase tracking-[0.24em] text-amber">Industries</p>
-          <h2 className="mt-3 font-head text-3xl font-bold text-white sm:text-4xl">Sectors we serve</h2>
+          <h2 className="mt-3 font-head text-3xl font-bold text-white sm:text-4xl">Equipment we work on</h2>
           <div className="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
             {industries.map(([title, body]) => (
               <article key={title} className="border border-white/10 p-6">
@@ -91,8 +94,8 @@ export default function Home() {
       <section className="bg-[#081722] px-6 py-20">
         <div className="mx-auto max-w-4xl">
           <p className="font-mono text-xs uppercase tracking-[0.24em] text-amber">Process</p>
-          <h2 className="mt-3 font-head text-3xl font-bold text-white sm:text-4xl">A structured validation pipeline</h2>
-          <p className="mt-4 max-w-xl font-body text-slate-300">Every item follows the same sequence — nothing skipped, nothing assumed.</p>
+          <h2 className="mt-3 font-head text-3xl font-bold text-white sm:text-4xl">A clear repair process</h2>
+          <p className="mt-4 max-w-xl font-body text-slate-300">We keep you informed from the first inspection through testing and collection.</p>
           <ol className="mt-12 grid gap-0 border-t border-white/10 sm:grid-cols-2">
             {processSteps.map(([number, title, body]) => (
               <li key={number} className="grid grid-cols-[3rem_1fr] gap-4 border-b border-white/10 py-6">
@@ -109,13 +112,13 @@ export default function Home() {
 
       <section className="bg-[#0f1d2b] px-6 py-20">
         <div className="mx-auto max-w-6xl">
-          <p className="font-mono text-xs uppercase tracking-[0.24em] text-amber">Service philosophy</p>
+          <p className="font-mono text-xs uppercase tracking-[0.24em] text-amber">Our approach</p>
           <div className="mt-4 grid gap-10 lg:grid-cols-[1fr_1fr]">
-            <h2 className="font-head text-3xl font-bold text-white sm:text-4xl">When normal service reaches its limit.</h2>
+            <h2 className="font-head text-3xl font-bold text-white sm:text-4xl">Practical help for difficult faults.</h2>
             <div>
-              <p className="font-body leading-relaxed text-slate-300">We are the bench-level engineering layer for teams and customers facing faults that need component-level diagnostics, rework, failure analysis, or refurbishment beyond standard replacement procedures.</p>
+              <p className="font-body leading-relaxed text-slate-300">When a device is expensive, discontinued, or too important to replace, our team investigates the cause and looks for a dependable repair path.</p>
               <ul className="mt-6 grid gap-3 font-mono text-xs uppercase tracking-wide text-slate-300 sm:grid-cols-2">
-                {["Documented findings", "Structured pre-test", "Component-level diagnosis", "Parametric validation", "Final functional testing", "Equipment tracking"].map((item) => <li key={item} className="border-l-2 border-amber pl-3">{item}</li>)}
+                {["Clear explanations", "Careful inspection", "Component-level repair", "Upfront estimates", "Final functional testing", "Repair updates"].map((item) => <li key={item} className="border-l-2 border-amber pl-3">{item}</li>)}
               </ul>
             </div>
           </div>
@@ -124,10 +127,10 @@ export default function Home() {
 
       <section className="bg-[#122334] px-6 py-20">
         <div className="mx-auto max-w-6xl">
-          <p className="font-mono text-xs uppercase tracking-[0.24em] text-amber">Knowledge centre</p>
-          <h2 className="mt-3 font-head text-3xl font-bold text-white sm:text-4xl">Engineering insight</h2>
+          <p className="font-mono text-xs uppercase tracking-[0.24em] text-amber">Helpful information</p>
+          <h2 className="mt-3 font-head text-3xl font-bold text-white sm:text-4xl">Repair guidance</h2>
           <div className="mt-10 grid gap-6 md:grid-cols-3">
-            {["What is component-level electronics repair?", "What is PCB failure analysis?", "What happens during an electronics diagnostic assessment?"].map((title) => (
+            {["When is repair better than replacement?", "What happens during diagnosis?", "How should I prepare equipment for repair?"].map((title) => (
               <article key={title} className="border border-white/10 p-6">
                 <h3 className="font-head text-lg font-bold text-white">{title}</h3>
                 <p className="mt-3 font-body text-sm text-slate-300">[Add an article summary here.]</p>
@@ -141,9 +144,9 @@ export default function Home() {
       <section className="border-t border-white/10 bg-[#081722] px-6 py-20">
         <div className="mx-auto flex max-w-6xl flex-col items-start justify-between gap-8 sm:flex-row sm:items-center">
           <div>
-            <p className="font-mono text-xs uppercase tracking-[0.24em] text-amber">Get in touch</p>
-            <h2 className="mt-3 font-head text-3xl font-bold text-white sm:text-4xl">Have equipment that needs a second opinion?</h2>
-            <p className="mt-4 max-w-xl font-body text-slate-300">Describe the equipment and the fault. We&apos;ll confirm whether it&apos;s a fit for diagnostics and repair before any work begins.</p>
+            <p className="font-mono text-xs uppercase tracking-[0.24em] text-amber">Start a repair request</p>
+            <h2 className="mt-3 font-head text-3xl font-bold text-white sm:text-4xl">Something not working as it should?</h2>
+            <p className="mt-4 max-w-xl font-body text-slate-300">Send us the equipment details and symptoms. We&apos;ll let you know what information is needed next.</p>
           </div>
           <Link href="/book-repair" className="whitespace-nowrap bg-amber px-6 py-3 font-body text-sm font-medium text-ink hover:bg-white">Request an assessment</Link>
         </div>
