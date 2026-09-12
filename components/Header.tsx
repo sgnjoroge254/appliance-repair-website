@@ -18,7 +18,7 @@ export default function Header() {
     <header className="sticky top-0 z-50 border-b border-white/10 bg-[#0f1d2b]/95 backdrop-blur">
       <div className="mx-auto flex max-w-6xl items-center justify-between px-6 py-3">
         <Link href="/" className="flex items-center" onClick={() => setOpen(false)}>
-          <img src="/1789005050.png" alt={`${businessInfo.name} avatar`} className="h-14 w-14 object-contain sm:h-16 sm:w-16" />
+          <img src="/1789005050.png" alt={`${businessInfo.name} avatar`} className="h-10 w-10 object-contain sm:h-12 sm:w-12" />
         </Link>
 
         <nav className="hidden items-center gap-8 md:flex">

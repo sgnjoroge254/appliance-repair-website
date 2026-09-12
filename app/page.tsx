@@ -21,9 +21,6 @@ export default function Home() {
   return (
     <>
       <section className="bg-[#081722] px-6 py-16 sm:py-24">
-        <div className="mx-auto mb-16 max-w-6xl">
-          <img src="/atomic-vitality-logo.jpe" alt="Atomic Vitality Tech Lab" className="h-auto w-full max-w-2xl object-contain" />
-        </div>
         <div className="mx-auto grid max-w-6xl gap-16 lg:grid-cols-[1.15fr_.85fr] lg:items-end">
           <div>
             <p className="font-mono text-xs uppercase tracking-[0.24em] text-amber">Atomic Vitality Tech Lab</p>
@@ -41,9 +38,6 @@ export default function Home() {
                 View our services
               </Link>
             </div>
-          </div>
-          <div className="flex justify-center lg:justify-end">
-            <img src="/1789005050.png" alt={`${businessInfo.name} avatar`} className="h-56 w-56 object-contain drop-shadow-[0_20px_45px_rgba(2,6,23,0.6)] sm:h-72 sm:w-72" />
           </div>
         </div>
       </section>
