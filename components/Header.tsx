@@ -17,11 +17,11 @@ export default function Header() {
   return (
     <header className="sticky top-0 z-50 border-b border-white/10 bg-[#0f1d2b]/95 backdrop-blur">
       <div className="mx-auto flex max-w-6xl items-center justify-between px-6 py-3">
-        <Link href="/" className="flex items-center" onClick={() => setOpen(false)}>
+        <Link href="/" className="order-last ml-3 flex items-center" onClick={() => setOpen(false)}>
           <img
             src="/atomic-vitality-avatar.jpe"
             alt={`${businessInfo.name} avatar`}
-            className="h-10 w-10 rounded-full object-contain mix-blend-multiply sm:h-12 sm:w-12"
+            className="h-10 w-10 rounded-full object-contain invert sm:h-12 sm:w-12"
           />
         </Link>
 
