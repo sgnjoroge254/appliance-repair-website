@@ -113,9 +113,9 @@ export default function AboutPage() {
 
         <dl className="mx-auto mt-10 grid max-w-3xl grid-cols-2 gap-6 border-t border-steelline pt-10 sm:grid-cols-4">
           {[
-            ["Years in operation", "[X]"],
-            ["Repairs completed", "[X]+"],
-            ["Avg. turnaround", "[X days]"],
+            ["Years in operation", "10"],
+            ["Repairs completed", "1000+"],
+            ["Avg. turnaround", "2–3 days"],
             ["Warranty on repairs", "6 months"],
           ].map(([label, value]) => (
             <div key={label}>
