@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { services, businessInfo } from "@/lib/services";
+import HeroVideo from "@/components/HeroVideo";
 
 const processSteps = [
   ["01", "Receive", "Equipment is logged and assigned a tracking reference."],
@@ -20,8 +21,10 @@ const industries = [
 export default function Home() {
   return (
     <>
-      <section className="bg-[#081722] px-6 py-16 sm:py-24">
-        <div className="mx-auto grid max-w-6xl gap-16 lg:grid-cols-[1.15fr_.85fr] lg:items-end">
+      <section className="relative overflow-hidden bg-[#081722] px-6 py-16 sm:py-24">
+        <HeroVideo />
+        <div className="absolute inset-0 bg-[#081722]/75" />
+        <div className="relative z-10 mx-auto grid max-w-6xl gap-16 lg:grid-cols-[1.15fr_.85fr] lg:items-end">
           <div>
             <p className="font-mono text-xs uppercase tracking-[0.24em] text-amber">Atomic Vitality Tech Lab</p>
             <h1 className="mt-6 max-w-3xl font-head text-5xl font-extrabold leading-[0.98] text-white sm:text-7xl">
