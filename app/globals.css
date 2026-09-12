@@ -21,8 +21,3 @@ button:focus-visible {
   outline: 2px solid #E8A33D;
   outline-offset: 2px;
 }
-
-.avatar-mark {
-  filter: brightness(0) saturate(100%) invert(72%) sepia(87%) saturate(690%)
-    hue-rotate(349deg) brightness(101%) contrast(91%);
-}

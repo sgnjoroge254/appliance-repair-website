@@ -21,7 +21,7 @@ export default function Header() {
           <img
             src="/atomic-vitality-logo.jpe"
             alt={`${businessInfo.name} avatar`}
-            className="avatar-mark h-10 w-10 rounded-full object-contain sm:h-12 sm:w-12"
+            className="h-10 w-10 object-contain sm:h-12 sm:w-12"
           />
         </Link>
 
