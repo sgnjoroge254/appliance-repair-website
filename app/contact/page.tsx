@@ -1,4 +1,5 @@
 import { businessInfo } from "@/lib/services";
+import AssessmentForm from "@/components/AssessmentForm";
 
 export default function ContactPage() {
   return (
@@ -39,24 +40,10 @@ export default function ContactPage() {
           </dl>
         </div>
 
-        <form className="space-y-4 border border-[#15a6a0]/40 bg-white p-6 shadow-xl shadow-[#15a6a0]/10">
-          <div>
-            <label className="font-mono text-xs uppercase tracking-wide text-ink/50" htmlFor="name">Name</label>
-            <input id="name" name="name" type="text" className="mt-1 w-full border border-steelline px-3 py-2 font-body text-sm" />
-          </div>
-          <div>
-            <label className="font-mono text-xs uppercase tracking-wide text-ink/50" htmlFor="phone">Phone</label>
-            <input id="phone" name="phone" type="tel" className="mt-1 w-full border border-steelline px-3 py-2 font-body text-sm" />
-          </div>
-          <div>
-            <label className="font-mono text-xs uppercase tracking-wide text-ink/50" htmlFor="message">Message</label>
-            <textarea id="message" name="message" rows={4} className="mt-1 w-full border border-steelline px-3 py-2 font-body text-sm" />
-          </div>
-          <button type="submit" className="w-full bg-ink px-6 py-3 font-body text-sm font-medium text-white hover:bg-amber hover:text-ink">
-            Send message
-          </button>
-          <p className="font-body text-xs text-ink/40">[Wire this form up to your email/CRM — it's UI only right now.]</p>
-        </form>
+        <div>
+          <p className="mb-4 font-mono text-xs uppercase tracking-wide text-[#b66d00]">Book a repair</p>
+          <AssessmentForm />
+        </div>
         </div>
       </section>
 
