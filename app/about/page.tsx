@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { businessInfo } from "@/lib/services";
+import RepairGallery from "@/components/RepairGallery";
 
 const specialties = [
   {
@@ -125,6 +126,8 @@ export default function AboutPage() {
           ))}
         </dl>
       </section>
+
+      <RepairGallery />
 
       <section className="border-t border-steelline bg-ink">
         <div className="mx-auto flex max-w-6xl flex-col items-start gap-6 px-6 py-16 sm:flex-row sm:items-center sm:justify-between">

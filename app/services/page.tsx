@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { services } from "@/lib/services";
 import ServiceCard from "@/components/ServiceCard";
+import RepairGallery from "@/components/RepairGallery";
 
 export default function ServicesPage() {
   return (
@@ -26,6 +27,8 @@ export default function ServicesPage() {
           ))}
         </div>
       </section>
+
+      <RepairGallery />
 
       <section className="border-t border-steelline bg-ink">
         <div className="mx-auto flex max-w-6xl flex-col items-start gap-6 px-6 py-16 sm:flex-row sm:items-center sm:justify-between">

@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { services, businessInfo } from "@/lib/services";
 import HeroVideo from "@/components/HeroVideo";
+import RepairGallery from "@/components/RepairGallery";
 
 const processSteps = [
   ["01", "Receive", "Equipment is logged and assigned a tracking reference."],
@@ -78,6 +79,8 @@ export default function Home() {
           </div>
         </div>
       </section>
+
+      <RepairGallery />
 
       <section className="bg-[#122334] px-6 py-20">
         <div className="mx-auto max-w-6xl">
