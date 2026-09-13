@@ -1,5 +1,6 @@
 import { businessInfo } from "@/lib/services";
 import AssessmentForm from "@/components/AssessmentForm";
+import SectionDivider from "@/components/SectionDivider";
 
 export default function ContactPage() {
   return (
@@ -46,6 +47,8 @@ export default function ContactPage() {
         </div>
         </div>
       </section>
+
+      <SectionDivider />
 
       <section className="border-t border-steelline bg-steel px-6 py-16">
         <div className="mx-auto max-w-6xl">

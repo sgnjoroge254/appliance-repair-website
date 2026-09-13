@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { businessInfo } from "@/lib/services";
+import SectionDivider from "@/components/SectionDivider";
 
 const specialties = [
   {
@@ -56,6 +57,8 @@ export default function AboutPage() {
         </div>
       </section>
 
+      <SectionDivider />
+
       <section className="bg-[#f7fbfa] px-6 py-16">
         <div className="mx-auto max-w-3xl">
         <div className="grid gap-6 sm:grid-cols-2">
@@ -75,6 +78,8 @@ export default function AboutPage() {
         </div>
       </section>
 
+      <SectionDivider />
+
       <section className="border-t border-steelline bg-steel px-6 py-16">
         <div className="mx-auto max-w-5xl">
           <h2 className="font-head text-2xl font-bold text-ink">What we do</h2>
@@ -93,6 +98,8 @@ export default function AboutPage() {
         </div>
       </section>
 
+      <SectionDivider />
+
       <section className="mx-auto max-w-5xl px-6 py-16">
         <h2 className="font-head text-2xl font-bold text-ink">Why choose {businessInfo.name}</h2>
         <div className="mt-8 grid gap-8 sm:grid-cols-2">
@@ -104,6 +111,8 @@ export default function AboutPage() {
           ))}
         </div>
       </section>
+
+      <SectionDivider />
 
       <section className="border-t border-steelline bg-steel px-6 py-16">
         <div className="mx-auto max-w-3xl">

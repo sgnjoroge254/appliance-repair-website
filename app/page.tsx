@@ -2,6 +2,7 @@ import Link from "next/link";
 import { services, businessInfo } from "@/lib/services";
 import HeroVideo from "@/components/HeroVideo";
 import RepairGallery from "@/components/RepairGallery";
+import SectionDivider from "@/components/SectionDivider";
 
 const processSteps = [
   ["01", "Receive", "Equipment is logged and assigned a tracking reference."],
@@ -53,6 +54,8 @@ export default function Home() {
         </div>
       </section>
 
+      <SectionDivider />
+
       <section className="bg-[#0f1d2b] px-6 py-20">
         <div className="mx-auto max-w-6xl">
           <p className="font-mono text-xs uppercase tracking-[0.24em] text-amber">Capabilities</p>
@@ -80,6 +83,8 @@ export default function Home() {
         </div>
       </section>
 
+      <SectionDivider />
+
       <RepairGallery />
 
       <section className="bg-[#122334] px-6 py-20">
@@ -97,6 +102,8 @@ export default function Home() {
           </div>
         </div>
       </section>
+
+      <SectionDivider />
 
       <section className="bg-[#081722] px-6 py-20">
         <div className="mx-auto max-w-4xl">
@@ -116,6 +123,8 @@ export default function Home() {
           </ol>
         </div>
       </section>
+
+      <SectionDivider />
 
       <section className="bg-[#0f1d2b] px-6 py-20">
         <div className="mx-auto max-w-6xl">

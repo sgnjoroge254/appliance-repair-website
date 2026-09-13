@@ -1,5 +1,5 @@
 import Link from "next/link";
-import RepairGallery from "@/components/RepairGallery";
+import SectionDivider from "@/components/SectionDivider";
 
 const capabilities = [
   {
@@ -99,7 +99,7 @@ export default function ServicesPage() {
         </div>
       </section>
 
-      <RepairGallery />
+      <SectionDivider />
 
       <section className="border-t border-white/10 bg-[#081722] px-6 py-16">
         <div className="mx-auto flex max-w-6xl flex-col items-start justify-between gap-6 sm:flex-row sm:items-center">

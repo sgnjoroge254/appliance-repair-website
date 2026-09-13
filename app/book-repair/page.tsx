@@ -1,4 +1,5 @@
 import AssessmentForm from "@/components/AssessmentForm";
+import SectionDivider from "@/components/SectionDivider";
 
 export default function BookRepairPage() {
   return (
@@ -9,6 +10,7 @@ export default function BookRepairPage() {
         <p className="mt-4 max-w-2xl font-body text-sm leading-relaxed text-ink/70">
           Share the details below so our team can review the fault and advise you on the next step before any repair work begins.
         </p>
+        <SectionDivider />
         <div className="mt-10">
           <AssessmentForm />
         </div>
