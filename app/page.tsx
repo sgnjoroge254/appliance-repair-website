@@ -42,6 +42,13 @@ export default function Home() {
               </Link>
             </div>
           </div>
+          <div className="hidden lg:block">
+            <img
+              src="/component-repair.jpg"
+              alt="Technician holding a circuit component during repair"
+              className="h-[28rem] w-full rounded-sm object-cover opacity-90"
+            />
+          </div>
         </div>
       </section>
 
