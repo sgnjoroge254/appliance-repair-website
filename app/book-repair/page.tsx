@@ -4,8 +4,9 @@ const fieldClassName = "mt-1 w-full border border-steelline px-3 py-2 font-body 
 
 export default function BookRepairPage() {
   return (
-    <section className="mx-auto max-w-3xl px-6 py-20">
-      <p className="font-mono text-xs uppercase tracking-wide text-ink/50">Request an assessment</p>
+    <section className="bg-gradient-to-br from-[#fff7e5] via-[#f7fbfa] to-[#dff7f1] px-6 py-20">
+      <div className="mx-auto max-w-3xl">
+      <p className="font-mono text-xs uppercase tracking-wide text-[#b66d00]">Request an assessment</p>
       <h1 className="mt-3 font-head text-3xl font-extrabold text-ink sm:text-4xl">
         Tell us about the equipment
       </h1>
@@ -13,7 +14,7 @@ export default function BookRepairPage() {
         Share the details below so our team can review the fault and advise you on the next step before any repair work begins.
       </p>
 
-      <form className="mt-10 space-y-10 border border-steelline bg-white p-6 sm:p-8" encType="multipart/form-data">
+      <form className="mt-10 space-y-10 border border-[#15a6a0]/40 bg-white p-6 shadow-xl shadow-[#15a6a0]/10 sm:p-8" encType="multipart/form-data">
         <fieldset className="space-y-5">
           <legend className="font-mono text-xs uppercase tracking-[0.18em] text-ink/50">Your details</legend>
           <div>
@@ -104,6 +105,7 @@ export default function BookRepairPage() {
           Used only to review and respond to this request. The form is currently a UI placeholder and is not connected to a submission service.
         </p>
       </form>
+      </div>
     </section>
   );
 }

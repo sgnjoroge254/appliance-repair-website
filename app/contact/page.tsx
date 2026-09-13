@@ -3,16 +3,17 @@ import { businessInfo } from "@/lib/services";
 export default function ContactPage() {
   return (
     <>
-      <section className="mx-auto grid max-w-6xl gap-12 px-6 py-20 md:grid-cols-2">
+      <section className="bg-gradient-to-br from-[#fff7e5] via-[#f7fbfa] to-[#dff7f1] px-6 py-20">
+        <div className="mx-auto grid max-w-6xl gap-12 md:grid-cols-2">
         <div>
           <p className="font-mono text-xs uppercase tracking-wide text-ink/50">Contact</p>
           <h1 className="mt-3 font-head text-3xl font-extrabold text-ink sm:text-4xl">Get in touch</h1>
-          <dl className="mt-8 space-y-5 font-body text-sm">
-          <div>
+          <dl className="mt-8 grid gap-3 font-body text-sm sm:grid-cols-2">
+          <div className="border-l-4 border-amber bg-white/80 p-4">
             <dt className="font-mono text-xs text-ink/50">Phone</dt>
             <dd className="mt-1 text-ink">{businessInfo.phone}</dd>
           </div>
-          <div>
+          <div className="border-l-4 border-[#15a6a0] bg-white/80 p-4">
             <dt className="font-mono text-xs text-ink/50">WhatsApp</dt>
             <dd className="mt-1">
         <a
@@ -23,22 +24,22 @@ export default function ContactPage() {
               </a>
             </dd>
           </div>
-          <div>
+          <div className="border-l-4 border-[#ef6c57] bg-white/80 p-4">
             <dt className="font-mono text-xs text-ink/50">Email</dt>
             <dd className="mt-1 text-ink">{businessInfo.email}</dd>
           </div>
-          <div>
+          <div className="border-l-4 border-[#7c68d9] bg-white/80 p-4">
             <dt className="font-mono text-xs text-ink/50">Address</dt>
             <dd className="mt-1 text-ink">{businessInfo.address}</dd>
           </div>
-          <div>
+          <div className="border-l-4 border-[#e8a33d] bg-white/80 p-4">
             <dt className="font-mono text-xs text-ink/50">Hours</dt>
             <dd className="mt-1 text-ink">{businessInfo.hours}</dd>
           </div>
           </dl>
         </div>
 
-        <form className="space-y-4 border border-steelline bg-white p-6">
+        <form className="space-y-4 border border-[#15a6a0]/40 bg-white p-6 shadow-xl shadow-[#15a6a0]/10">
           <div>
             <label className="font-mono text-xs uppercase tracking-wide text-ink/50" htmlFor="name">Name</label>
             <input id="name" name="name" type="text" className="mt-1 w-full border border-steelline px-3 py-2 font-body text-sm" />
@@ -56,6 +57,7 @@ export default function ContactPage() {
           </button>
           <p className="font-body text-xs text-ink/40">[Wire this form up to your email/CRM — it's UI only right now.]</p>
         </form>
+        </div>
       </section>
 
       <section className="border-t border-steelline bg-steel px-6 py-16">

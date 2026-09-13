@@ -42,9 +42,9 @@ const distinctions = [
 export default function AboutPage() {
   return (
     <>
-      <section className="border-b border-steelline bg-steel px-6 py-16">
+      <section className="border-b border-amber/30 bg-gradient-to-br from-[#fff1d2] via-steel to-[#dff7f1] px-6 py-16">
         <div className="mx-auto max-w-3xl">
-          <p className="font-mono text-xs uppercase tracking-wide text-ink/50">About</p>
+          <p className="font-mono text-xs uppercase tracking-wide text-[#b66d00]">About</p>
           <h1 className="mt-3 font-head text-3xl font-extrabold text-ink sm:text-4xl">
             Revitalizing your technology
           </h1>
@@ -57,20 +57,22 @@ export default function AboutPage() {
         </div>
       </section>
 
-      <section className="mx-auto max-w-3xl px-6 py-16">
-        <div className="grid gap-10 sm:grid-cols-2">
-          <div>
-            <h2 className="font-head text-xl font-bold text-ink">Our mission</h2>
+      <section className="bg-[#f7fbfa] px-6 py-16">
+        <div className="mx-auto max-w-3xl">
+        <div className="grid gap-6 sm:grid-cols-2">
+          <div className="border-t-4 border-amber bg-[#fff8e8] p-6 shadow-sm">
+            <h2 className="font-head text-xl font-bold text-[#9b5b00]">Our mission</h2>
             <p className="mt-3 font-body text-sm leading-relaxed text-ink/70">
               To save our clients time and money through unmatched component-level electronic repair and custom engineering solutions that extend the life of technology and reduce electronic waste.
             </p>
           </div>
-          <div>
-            <h2 className="font-head text-xl font-bold text-ink">Our vision</h2>
+          <div className="border-t-4 border-[#15a6a0] bg-[#e9fbf7] p-6 shadow-sm">
+            <h2 className="font-head text-xl font-bold text-[#087b78]">Our vision</h2>
             <p className="mt-3 font-body text-sm leading-relaxed text-ink/70">
               To be the most trusted and advanced electronics diagnostics and repair lab in the region — known for turning "unfixable" into "fully functional."
             </p>
           </div>
+        </div>
         </div>
       </section>
 
@@ -82,7 +84,7 @@ export default function AboutPage() {
           </p>
           <div className="mt-8 grid gap-6 sm:grid-cols-3">
             {specialties.map((s) => (
-              <div key={s.title} className="border border-steelline bg-white p-6">
+              <div key={s.title} className="border border-[#15a6a0]/30 bg-white p-6 shadow-sm transition hover:-translate-y-1 hover:border-[#15a6a0]">
                 <span className="text-2xl">{s.icon}</span>
                 <h3 className="mt-3 font-head text-lg font-bold text-ink">{s.title}</h3>
                 <p className="mt-2 font-body text-sm leading-relaxed text-ink/70">{s.body}</p>

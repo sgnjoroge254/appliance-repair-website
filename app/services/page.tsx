@@ -6,9 +6,9 @@ import RepairGallery from "@/components/RepairGallery";
 export default function ServicesPage() {
   return (
     <>
-      <section className="border-b border-steelline bg-steel px-6 py-16">
+      <section className="border-b border-amber/30 bg-gradient-to-br from-[#fff7e5] via-steel to-[#d9f4f0] px-6 py-16">
         <div className="mx-auto max-w-6xl">
-          <p className="font-mono text-xs uppercase tracking-wide text-ink/50">Services</p>
+          <p className="font-mono text-xs uppercase tracking-wide text-[#b66d00]">Services</p>
           <h1 className="mt-3 max-w-2xl font-head text-3xl font-extrabold text-ink sm:text-4xl">
             Electronics repair and engineering, down to the component level
           </h1>
@@ -18,13 +18,15 @@ export default function ServicesPage() {
         </div>
       </section>
 
-      <section className="mx-auto max-w-6xl px-6 py-16">
+      <section className="bg-[#f7fbfa] px-6 py-16">
+        <div className="mx-auto max-w-6xl">
         <div id="services-grid" className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
           {services.map((s) => (
             <div key={s.slug} id={s.slug}>
               <ServiceCard service={s} />
             </div>
           ))}
+        </div>
         </div>
       </section>
 
