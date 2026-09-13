@@ -26,7 +26,7 @@ export default function Home() {
       <section className="relative overflow-hidden bg-[#081722] px-6 py-16 sm:py-24">
         <HeroVideo />
         <div className="absolute inset-0 bg-[#081722]/75" />
-        <div className="relative z-10 mx-auto grid max-w-6xl gap-16 lg:grid-cols-[1.15fr_.85fr] lg:items-end">
+        <div className="relative z-10 mx-auto max-w-6xl">
           <div>
             <p className="font-mono text-xs uppercase tracking-[0.24em] text-amber">Atomic Vitality Tech Lab</p>
             <h1 className="mt-6 max-w-3xl font-head text-5xl font-extrabold leading-[0.98] text-white sm:text-7xl">
@@ -43,13 +43,6 @@ export default function Home() {
                 View our services
               </Link>
             </div>
-          </div>
-          <div className="hidden lg:block">
-            <img
-              src="/component-repair.jpg"
-              alt="Technician holding a circuit component during repair"
-              className="h-[28rem] w-full rounded-sm object-cover opacity-90"
-            />
           </div>
         </div>
       </section>
