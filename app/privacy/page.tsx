@@ -1,3 +1,11 @@
+import { createPageMetadata } from "@/lib/seo";
+
+export const metadata = createPageMetadata(
+  "Privacy Policy",
+  "Read how Atomic Vitality Tech Lab uses information submitted through its electronics repair assessment and contact forms.",
+  ["Atomic Vitality privacy policy", "electronics repair privacy Nairobi"],
+);
+
 export default function PrivacyPage() {
   return (
     <section className="mx-auto max-w-3xl px-6 py-20">

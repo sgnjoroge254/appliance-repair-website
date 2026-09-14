@@ -1,5 +1,12 @@
 import AssessmentForm from "@/components/AssessmentForm";
 import SectionDivider from "@/components/SectionDivider";
+import { createPageMetadata } from "@/lib/seo";
+
+export const metadata = createPageMetadata(
+  "Request an Electronics Repair Assessment",
+  "Tell Atomic Vitality Tech Lab about your equipment fault and request a professional electronics repair assessment in Nairobi.",
+  ["request electronics repair Nairobi", "electronics repair assessment", "PCB repair quote Kenya", "book electronics repair"],
+);
 
 export default function BookRepairPage() {
   return (

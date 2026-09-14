@@ -1,5 +1,12 @@
 import Link from "next/link";
 import SectionDivider from "@/components/SectionDivider";
+import { createPageMetadata } from "@/lib/seo";
+
+export const metadata = createPageMetadata(
+  "Our Electronics Repair Process",
+  "See how Atomic Vitality Tech Lab receives, diagnoses, repairs, validates, and hands back electronic equipment with clear communication.",
+  ["electronics repair process", "electronics diagnostics process Nairobi", "PCB repair workflow", "equipment repair assessment"],
+);
 
 const steps = [
   {

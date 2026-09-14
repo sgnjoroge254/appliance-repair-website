@@ -1,6 +1,13 @@
 import Link from "next/link";
 import { businessInfo } from "@/lib/services";
 import SectionDivider from "@/components/SectionDivider";
+import { createPageMetadata } from "@/lib/seo";
+
+export const metadata = createPageMetadata(
+  "About Atomic Vitality Tech Lab",
+  "Learn about Atomic Vitality Tech Lab, a Nairobi electronics repair laboratory focused on careful diagnostics, component-level repair, and extending equipment life.",
+  ["about Atomic Vitality Tech Lab", "electronics repair lab Nairobi", "electronics technicians Kenya", "sustainable electronics repair"],
+);
 
 const specialties = [
   {

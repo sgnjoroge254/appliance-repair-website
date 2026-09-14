@@ -1,3 +1,11 @@
+import { createPageMetadata } from "@/lib/seo";
+
+export const metadata = createPageMetadata(
+  "Track Your Repair",
+  "Check the status of your Atomic Vitality Tech Lab repair and contact the Nairobi lab for an equipment update.",
+  ["track electronics repair Nairobi", "repair status Kenya", "Atomic Vitality repair tracking"],
+);
+
 export default function TrackRepairPage() {
   return (
     <section className="mx-auto max-w-lg px-6 py-20">

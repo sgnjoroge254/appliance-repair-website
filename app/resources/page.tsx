@@ -1,4 +1,11 @@
 import Link from "next/link";
+import { createPageMetadata } from "@/lib/seo";
+
+export const metadata = createPageMetadata(
+  "Electronics Repair Resources",
+  "Prepare your equipment for assessment with practical guidance from Atomic Vitality Tech Lab in Nairobi.",
+  ["electronics repair resources", "prepare device for repair", "PCB repair advice Kenya", "electronics fault photos"],
+);
 
 const resources = [
   ["Prepare equipment for assessment", "Bring the complete unit where possible, include relevant cables or adapters, and write down the symptoms and when they began."],

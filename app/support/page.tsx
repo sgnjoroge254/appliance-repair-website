@@ -1,4 +1,11 @@
 import Link from "next/link";
+import { createPageMetadata } from "@/lib/seo";
+
+export const metadata = createPageMetadata(
+  "Electronics Repair Support",
+  "Get practical support before visiting Atomic Vitality Tech Lab, including equipment preparation, troubleshooting guidance, and repair updates.",
+  ["electronics repair support Nairobi", "electronics troubleshooting Kenya", "repair help Nairobi", "technical support electronics"],
+);
 
 const supportAreas = [
   ["Before you visit", "Send the equipment details, symptoms, and a clear photo so we can prepare for assessment."],

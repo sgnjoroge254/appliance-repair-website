@@ -1,5 +1,12 @@
 import Link from "next/link";
 import SectionDivider from "@/components/SectionDivider";
+import { createPageMetadata } from "@/lib/seo";
+
+export const metadata = createPageMetadata(
+  "Electronics Repair Services",
+  "Explore component-level board repair, electronics diagnostics, PCB rework, failure analysis, refurbishment, and specialist equipment recovery in Nairobi.",
+  ["electronics repair services Nairobi", "component-level board repair", "PCB rework Kenya", "electronics diagnostics", "failure analysis Nairobi"],
+);
 
 const capabilities = [
   {

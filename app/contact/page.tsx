@@ -1,6 +1,13 @@
 import { businessInfo } from "@/lib/services";
 import AssessmentForm from "@/components/AssessmentForm";
 import SectionDivider from "@/components/SectionDivider";
+import { createPageMetadata } from "@/lib/seo";
+
+export const metadata = createPageMetadata(
+  "Contact Electronics Repair Lab",
+  "Contact Atomic Vitality Tech Lab at Kang'ari Building, Luthuli Avenue, Nairobi CBD for electronics repair, diagnostics, and technical assessment.",
+  ["contact electronics repair Nairobi", "Atomic Vitality Nairobi CBD", "electronics repair Luthuli Avenue", "repair lab Nairobi phone"],
+);
 
 export default function ContactPage() {
   return (

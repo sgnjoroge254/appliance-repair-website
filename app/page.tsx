@@ -3,6 +3,13 @@ import { services, businessInfo } from "@/lib/services";
 import HeroVideo from "@/components/HeroVideo";
 import RepairGallery from "@/components/RepairGallery";
 import SectionDivider from "@/components/SectionDivider";
+import { createPageMetadata } from "@/lib/seo";
+
+export const metadata = createPageMetadata(
+  "Electronics Repair in Nairobi",
+  "Atomic Vitality Tech Lab provides trusted component-level electronics repair, diagnostics, PCB repair, and equipment recovery in Nairobi CBD.",
+  ["electronics repair Nairobi", "appliance electronics repair", "PCB repair Nairobi", "board repair Kenya", "electronics diagnostics"],
+);
 
 const processSteps = [
   ["01", "Receive", "Equipment is logged and assigned a tracking reference."],

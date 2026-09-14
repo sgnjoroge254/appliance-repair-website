@@ -1,4 +1,11 @@
 import Link from "next/link";
+import { createPageMetadata } from "@/lib/seo";
+
+export const metadata = createPageMetadata(
+  "Atomic Vitality Customer Experience",
+  "Discover the clear communication, careful handling, and practical repair outcomes Atomic Vitality Tech Lab aims to deliver.",
+  ["Atomic Vitality reviews", "electronics repair reviews Nairobi", "trusted repair lab Kenya", "customer electronics repair"],
+);
 
 const reviewThemes = [
   ["Clear explanations", "Customers should understand what failed, what can be repaired, and what the next decision involves."],
