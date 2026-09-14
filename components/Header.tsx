@@ -19,7 +19,7 @@ export default function Header() {
       <div className="mx-auto flex max-w-6xl items-center justify-between px-6 py-3">
         <Link href="/" className="flex items-center" onClick={() => setOpen(false)}>
           <img
-            src="/atomic-vitality-logo.jpe"
+            src="/atomic-vitality-logo.png"
             alt={`${businessInfo.name} avatar`}
             className="h-10 w-10 object-contain sm:h-12 sm:w-12"
           />
