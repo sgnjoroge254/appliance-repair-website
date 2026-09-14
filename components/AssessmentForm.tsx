@@ -85,7 +85,7 @@ export default function AssessmentForm() {
         Request Assessment
       </button>
       <p className="font-body text-xs leading-relaxed text-slate-400">
-        Used only to review and respond to this request. The form is currently a UI placeholder and is not connected to a submission service.
+        Your details are used only to review the request and contact you about the equipment. Please do not include passwords, access codes, or other sensitive information.
       </p>
     </form>
   );

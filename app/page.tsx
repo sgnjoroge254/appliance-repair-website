@@ -14,10 +14,10 @@ const processSteps = [
 ];
 
 const industries = [
-  ["Consumer electronics", "[Add the devices and equipment you handle]"],
-  ["Industrial electronics", "[Add PLC, drive, control, or automation equipment]"],
-  ["Networking and telecom", "[Add routers, switches, and communications hardware]"],
-  ["Enterprise electronics", "[Add server boards and business-critical equipment]"],
+  ["Consumer electronics", "Boards, power supplies, control panels, displays, and other electronic devices used every day."],
+  ["Industrial electronics", "Control boards, power modules, drives, interfaces, and automation equipment that keep operations moving."],
+  ["Networking and telecom", "Routers, switches, communication modules, and supporting hardware affected by power or signal faults."],
+  ["Enterprise electronics", "Business-critical boards and electronic assemblies where repair can reduce downtime and replacement cost."],
 ];
 
 export default function Home() {
@@ -67,7 +67,7 @@ export default function Home() {
             <article className="bg-[#0f1d2b] p-7">
               <p className="font-mono text-xs text-slate-500">04</p>
               <h3 className="mt-8 font-head text-xl font-bold text-white">Refurbishment</h3>
-              <p className="mt-3 font-body text-sm leading-relaxed text-slate-300">[Add another service you offer, such as equipment restoration or preventive maintenance.]</p>
+              <p className="mt-3 font-body text-sm leading-relaxed text-slate-300">We clean, inspect, restore, and test equipment that has degraded through age, use, contamination, or repeated faults.</p>
               <Link href="/contact" className="mt-6 inline-block font-mono text-xs uppercase tracking-wide text-amber hover:text-white">
                 Learn more →
               </Link>
@@ -142,7 +142,7 @@ export default function Home() {
             {["When is repair better than replacement?", "What happens during diagnosis?", "How should I prepare equipment for repair?"].map((title) => (
               <article key={title} className="border border-white/10 p-6">
                 <h3 className="font-head text-lg font-bold text-white">{title}</h3>
-                <p className="mt-3 font-body text-sm text-slate-300">[Add an article summary here.]</p>
+                <p className="mt-3 font-body text-sm text-slate-300">Repair is often the better choice when the fault is understood, the equipment is valuable, or a replacement is unavailable or uneconomical.</p>
                 <Link href="/contact" className="mt-6 inline-block font-mono text-xs uppercase tracking-wide text-amber hover:text-white">Read more →</Link>
               </article>
             ))}

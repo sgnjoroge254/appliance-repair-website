@@ -17,7 +17,7 @@ export default function TrackRepairPage() {
             Check status
           </button>
         </div>
-        <p className="mt-3 font-body text-xs text-ink/40">[Wire this up to your job/ticketing system — it's UI only right now.]</p>
+        <p className="mt-3 font-body text-xs text-ink/40">Status lookup will be available once the repair tracking system is connected. For an update today, contact the lab with your name and equipment details.</p>
       </form>
     </section>
   );
