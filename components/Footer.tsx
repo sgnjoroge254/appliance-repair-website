@@ -4,7 +4,7 @@ import { businessInfo } from "@/lib/services";
 export default function Footer() {
   return (
     <footer className="border-t border-steelline bg-ink text-white">
-      <div className="mx-auto grid max-w-6xl gap-10 px-6 py-14 sm:grid-cols-3">
+      <div className="mx-auto grid max-w-6xl gap-10 px-6 py-14 sm:grid-cols-2 lg:grid-cols-4">
         <div>
           <p className="font-head text-lg font-bold">{businessInfo.name}</p>
           <p className="mt-2 max-w-xs font-body text-sm text-white/70">{businessInfo.tagline}</p>
@@ -16,6 +16,25 @@ export default function Footer() {
           <p>{businessInfo.email}</p>
           <p>{businessInfo.address}</p>
           <p className="mt-2 font-mono text-xs text-white/50">{businessInfo.hours}</p>
+        </div>
+
+        <div className="font-body text-sm text-white/70">
+          <p className="mb-3 font-mono text-xs uppercase tracking-wide text-white/50">Support</p>
+          <ul className="space-y-2">
+            <li><Link href="/support" className="hover:text-white">Support Desk</Link></li>
+            <li><Link href="/resources" className="hover:text-white">Repair Resources</Link></li>
+            <li><Link href="/reviews" className="hover:text-white">Customer Experience</Link></li>
+            <li><Link href="/contact" className="hover:text-white">Contact the Lab</Link></li>
+          </ul>
+        </div>
+
+        <div className="font-body text-sm text-white/70">
+          <p className="mb-3 font-mono text-xs uppercase tracking-wide text-white/50">Information</p>
+          <ul className="space-y-2">
+            <li><Link href="/about" className="hover:text-white">About Atomic Vitality</Link></li>
+            <li><Link href="/services" className="hover:text-white">Capabilities</Link></li>
+            <li><Link href="/privacy" className="hover:text-white">Privacy</Link></li>
+          </ul>
         </div>
 
         <div className="font-body text-sm text-white/70">
