@@ -4,7 +4,7 @@ const fieldClassName = "mt-1 w-full border border-amber/40 bg-[#081722] px-3 py-
 
 export default function AssessmentForm() {
   return (
-    <form className="space-y-10 border border-amber/50 bg-[#0f1d2b] p-6 shadow-2xl shadow-[#081722]/30 sm:p-8" encType="multipart/form-data">
+    <form action="/api/assessments" method="post" className="space-y-10 border border-amber/50 bg-[#0f1d2b] p-6 shadow-2xl shadow-[#081722]/30 sm:p-8" encType="multipart/form-data">
       <fieldset className="space-y-5">
         <legend className="font-mono text-xs uppercase tracking-[0.18em] text-amber">Your details</legend>
         <div>
