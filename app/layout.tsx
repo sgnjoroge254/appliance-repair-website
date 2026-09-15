@@ -28,6 +28,13 @@ export const metadata: Metadata = {
   authors: [{ name: businessInfo.name }],
   creator: businessInfo.name,
   publisher: businessInfo.name,
+  robots: {
+    index: true,
+    follow: true,
+    "max-image-preview": "large",
+    "max-snippet": -1,
+    "max-video-preview": -1,
+  },
   alternates: { canonical: siteUrl },
   openGraph: {
     title: `${businessInfo.name} | Electronics Repair in Nairobi`,
