@@ -1,100 +1,170 @@
 import Link from "next/link";
 import { services, businessInfo } from "@/lib/services";
-import ServiceCard from "@/components/ServiceCard";
+import HeroVideo from "@/components/HeroVideo";
+import RepairGallery from "@/components/RepairGallery";
+import SectionDivider from "@/components/SectionDivider";
+import { createPageMetadata } from "@/lib/seo";
+
+export const metadata = createPageMetadata(
+  "Electronics Repair in Nairobi",
+  "Atomic Vitality Tech Lab provides trusted component-level electronics repair, diagnostics, PCB repair, and equipment recovery in Nairobi CBD.",
+  ["electronics repair Nairobi", "appliance electronics repair", "PCB repair Nairobi", "board repair Kenya", "electronics diagnostics"],
+);
+
+const processSteps = [
+  ["01", "Receive", "Equipment is logged and assigned a tracking reference."],
+  ["02", "Pre-test", "Initial electrical checks establish a baseline before diagnosis."],
+  ["03", "Diagnose", "Power, signals, and circuit behavior are measured to isolate the fault."],
+  ["04", "Repair", "Component-level repair or rework is carried out under magnification."],
+  ["05", "Validate", "Repaired equipment is tested against defined operating parameters."],
+  ["06", "Handover", "Findings are documented before the equipment is returned."],
+];
+
+const industries = [
+  ["Consumer electronics", "Boards, power supplies, control panels, displays, and other electronic devices used every day."],
+  ["Industrial electronics", "Control boards, power modules, drives, interfaces, and automation equipment that keep operations moving."],
+  ["Networking and telecom", "Routers, switches, communication modules, and supporting hardware affected by power or signal faults."],
+  ["Enterprise electronics", "Business-critical boards and electronic assemblies where repair can reduce downtime and replacement cost."],
+];
 
 export default function Home() {
   return (
     <>
-      <section className="relative overflow-hidden border-b border-steelline">
-        <video
-          autoPlay
-          muted
-          loop
-          playsInline
-          className="absolute inset-0 h-full w-full object-cover"
-        >
-          <source src="/hero-bg.mp4" type="video/mp4" />
-        </video>
-        <div className="absolute inset-0 bg-ink/75" />
-
-        <div className="relative mx-auto max-w-4xl px-6 py-24 sm:py-28">
-          <p className="font-mono text-xs uppercase tracking-[0.2em] text-white/60">
-            Appliance repair, diagnostics & electronics support
-          </p>
-          <h1 className="mt-4 max-w-3xl font-head text-4xl font-extrabold leading-[1.02] text-white sm:text-5xl lg:text-7xl">
-            Repairs that keep your appliances and electronics working.
-          </h1>
-          <p className="mt-5 max-w-2xl font-body text-base text-white/80 sm:text-lg">
-            From faulty appliance boards to stubborn household issues, we diagnose the real cause, repair what can be saved, and keep working equipment out of landfill.
-          </p>
-          <div className="mt-8 flex flex-wrap gap-4">
-            <Link href="/book-repair" className="bg-amber px-6 py-3 font-body text-sm font-medium text-ink transition hover:bg-white">
-              Book a Repair
-            </Link>
-            <Link href="/track-repair" className="border border-white/40 px-6 py-3 font-body text-sm font-medium text-white transition hover:bg-white/10">
-              Track My Repair
-            </Link>
-          </div>
-        </div>
-      </section>
-
-      <section className="mx-auto max-w-6xl px-6 py-20">
-        <div className="flex items-end justify-between gap-6">
-          <h2 className="font-head text-2xl font-bold text-ink sm:text-3xl">What we do</h2>
-          <Link href="/services" className="whitespace-nowrap font-body text-sm font-medium text-ink underline decoration-amber underline-offset-4 hover:text-amber">
-            View all services
-          </Link>
-        </div>
-
-        <div className="mt-8 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-          {services.slice(0, 3).map((s) => (
-            <ServiceCard key={s.slug} service={s} />
-          ))}
-        </div>
-      </section>
-
-      <section className="border-t border-steelline bg-slate-950">
-        <div className="mx-auto max-w-6xl px-6 py-16">
-          <div className="grid gap-8 lg:grid-cols-3">
-            <div>
-              <p className="font-mono text-xs uppercase tracking-[0.18em] text-white/50">Why choose us</p>
-              <h2 className="mt-3 font-head text-3xl font-bold text-white">Clear diagnosis. Honest repair. Real value.</h2>
-            </div>
-            <div className="rounded-sm border border-white/10 bg-white/5 p-5">
-              <p className="font-mono text-xs uppercase tracking-[0.14em] text-amber">01</p>
-              <h3 className="mt-3 font-head text-xl font-bold text-white">We diagnose first</h3>
-              <p className="mt-2 font-body text-sm text-white/70">We trace the fault before fixing it, so you do not pay for guesswork or unnecessary replacement.</p>
-            </div>
-            <div className="rounded-sm border border-white/10 bg-white/5 p-5">
-              <p className="font-mono text-xs uppercase tracking-[0.14em] text-amber">02</p>
-              <h3 className="mt-3 font-head text-xl font-bold text-white">We repair with purpose</h3>
-              <p className="mt-2 font-body text-sm text-white/70">Whether it is a board-level fault or appliance issue, we focus on durable fixes and practical solutions.</p>
-            </div>
-            <div className="rounded-sm border border-white/10 bg-white/5 p-5 lg:col-span-3">
-              <p className="font-mono text-xs uppercase tracking-[0.14em] text-amber">03</p>
-              <h3 className="mt-3 font-head text-xl font-bold text-white">We keep electronics in use longer</h3>
-              <p className="mt-2 max-w-3xl font-body text-sm text-white/70">Instead of replacing a whole appliance or module at the first sign of trouble, we help extend the life of your equipment where possible.</p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section className="border-t border-steelline bg-ink">
-        <div className="mx-auto flex max-w-6xl flex-col items-start gap-6 px-6 py-16 sm:flex-row sm:items-center sm:justify-between">
+      <section className="relative overflow-hidden bg-[#081722] px-6 py-16 sm:py-24">
+        <HeroVideo />
+        <div className="absolute inset-0 bg-[#081722]/75" />
+        <div className="relative z-10 mx-auto max-w-6xl">
           <div>
-            <h2 className="font-head text-2xl font-bold text-white">Need a repair or advice?</h2>
-            <p className="mt-2 max-w-lg font-body text-sm text-white/70">
-              Tell us what is failing and we will help confirm whether it is repairable before any work begins.
+            <p className="font-mono text-xs uppercase tracking-[0.24em] text-amber">Atomic Vitality Tech Lab</p>
+            <h1 className="mt-6 max-w-3xl font-head text-5xl font-extrabold leading-[0.98] text-white sm:text-7xl">
+              Repairs that keep your technology working.
+            </h1>
+            <p className="mt-7 max-w-2xl font-body text-lg leading-relaxed text-slate-300">
+              {businessInfo.tagline}. We inspect the fault, explain what we find, and restore electronics with careful component-level work whenever repair is practical.
             </p>
+            <div className="mt-10 flex flex-wrap gap-4">
+              <Link href="/book-repair" className="bg-amber px-6 py-3 font-body text-sm font-medium text-ink hover:bg-white">
+                Tell us about your repair
+              </Link>
+              <Link href="/services" className="border border-white/30 px-6 py-3 font-body text-sm font-medium text-white hover:bg-white/10">
+                View our services
+              </Link>
+            </div>
           </div>
-          <div className="flex flex-wrap gap-4">
-            <Link href="/book-repair" className="bg-amber px-6 py-3 font-body text-sm font-medium text-ink transition hover:bg-white">
-              Book a Repair
-            </Link>
-            <Link href="/contact" className="border border-white/30 px-6 py-3 font-body text-sm font-medium text-white transition hover:bg-white/10">
-              Contact Us
-            </Link>
+        </div>
+      </section>
+
+      <SectionDivider />
+
+      <section className="bg-[#0f1d2b] px-6 py-20">
+        <div className="mx-auto max-w-6xl">
+          <p className="font-mono text-xs uppercase tracking-[0.24em] text-amber">Capabilities</p>
+          <h2 className="mt-3 font-head text-3xl font-bold text-white sm:text-4xl">How we can help</h2>
+          <div className="mt-10 grid gap-px bg-white/10 sm:grid-cols-2 lg:grid-cols-3">
+            {services.map((service) => (
+              <article key={service.slug} className="bg-[#0f1d2b] p-7">
+                <p className="font-mono text-xs text-slate-500">0{services.indexOf(service) + 1}</p>
+                <h3 className="mt-8 font-head text-xl font-bold text-white">{service.name}</h3>
+                <p className="mt-3 font-body text-sm leading-relaxed text-slate-300">{service.summary}</p>
+                <Link href={`/services#${service.slug}`} className="mt-6 inline-block font-mono text-xs uppercase tracking-wide text-amber hover:text-white">
+                  Learn more →
+                </Link>
+              </article>
+            ))}
+            <article className="bg-[#0f1d2b] p-7">
+              <p className="font-mono text-xs text-slate-500">04</p>
+              <h3 className="mt-8 font-head text-xl font-bold text-white">Refurbishment</h3>
+              <p className="mt-3 font-body text-sm leading-relaxed text-slate-300">We clean, inspect, restore, and test equipment that has degraded through age, use, contamination, or repeated faults.</p>
+              <Link href="/contact" className="mt-6 inline-block font-mono text-xs uppercase tracking-wide text-amber hover:text-white">
+                Learn more →
+              </Link>
+            </article>
           </div>
+        </div>
+      </section>
+
+      <SectionDivider />
+
+      <RepairGallery />
+
+      <section className="bg-[#122334] px-6 py-20">
+        <div className="mx-auto max-w-6xl">
+          <p className="font-mono text-xs uppercase tracking-[0.24em] text-amber">Industries</p>
+          <h2 className="mt-3 font-head text-3xl font-bold text-white sm:text-4xl">Equipment we work on</h2>
+          <div className="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+            {industries.map(([title, body]) => (
+              <article key={title} className="border border-white/10 p-6">
+                <h3 className="font-head text-lg font-bold text-white">{title}</h3>
+                <p className="mt-3 font-body text-sm leading-relaxed text-slate-300">{body}</p>
+                <Link href="/contact" className="mt-6 inline-block font-mono text-xs uppercase tracking-wide text-amber hover:text-white">Learn more →</Link>
+              </article>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <SectionDivider />
+
+      <section className="bg-[#081722] px-6 py-20">
+        <div className="mx-auto max-w-4xl">
+          <p className="font-mono text-xs uppercase tracking-[0.24em] text-amber">Process</p>
+          <h2 className="mt-3 font-head text-3xl font-bold text-white sm:text-4xl">A clear repair process</h2>
+          <p className="mt-4 max-w-xl font-body text-slate-300">We keep you informed from the first inspection through testing and collection.</p>
+          <ol className="mt-12 grid gap-0 border-t border-white/10 sm:grid-cols-2">
+            {processSteps.map(([number, title, body]) => (
+              <li key={number} className="grid grid-cols-[3rem_1fr] gap-4 border-b border-white/10 py-6">
+                <span className="font-mono text-sm text-amber">{number}</span>
+                <div>
+                  <h3 className="font-head text-lg font-bold text-white">{title}</h3>
+                  <p className="mt-2 font-body text-sm leading-relaxed text-slate-300">{body}</p>
+                </div>
+              </li>
+            ))}
+          </ol>
+        </div>
+      </section>
+
+      <SectionDivider />
+
+      <section className="bg-[#0f1d2b] px-6 py-20">
+        <div className="mx-auto max-w-6xl">
+          <p className="font-mono text-xs uppercase tracking-[0.24em] text-amber">Our approach</p>
+          <div className="mt-4 grid gap-10 lg:grid-cols-[1fr_1fr]">
+            <h2 className="font-head text-3xl font-bold text-white sm:text-4xl">Practical help for difficult faults.</h2>
+            <div>
+              <p className="font-body leading-relaxed text-slate-300">When a device is expensive, discontinued, or too important to replace, our team investigates the cause and looks for a dependable repair path.</p>
+              <ul className="mt-6 grid gap-3 font-mono text-xs uppercase tracking-wide text-slate-300 sm:grid-cols-2">
+                {["Clear explanations", "Careful inspection", "Component-level repair", "Upfront estimates", "Final functional testing", "Repair updates"].map((item) => <li key={item} className="border-l-2 border-amber pl-3">{item}</li>)}
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="bg-[#122334] px-6 py-20">
+        <div className="mx-auto max-w-6xl">
+          <p className="font-mono text-xs uppercase tracking-[0.24em] text-amber">Helpful information</p>
+          <h2 className="mt-3 font-head text-3xl font-bold text-white sm:text-4xl">Repair guidance</h2>
+          <div className="mt-10 grid gap-6 md:grid-cols-3">
+            {["When is repair better than replacement?", "What happens during diagnosis?", "How should I prepare equipment for repair?"].map((title) => (
+              <article key={title} className="border border-white/10 p-6">
+                <h3 className="font-head text-lg font-bold text-white">{title}</h3>
+                <p className="mt-3 font-body text-sm text-slate-300">Repair is often the better choice when the fault is understood, the equipment is valuable, or a replacement is unavailable or uneconomical.</p>
+                <Link href="/contact" className="mt-6 inline-block font-mono text-xs uppercase tracking-wide text-amber hover:text-white">Read more →</Link>
+              </article>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="border-t border-white/10 bg-[#081722] px-6 py-20">
+        <div className="mx-auto flex max-w-6xl flex-col items-start justify-between gap-8 sm:flex-row sm:items-center">
+          <div>
+            <p className="font-mono text-xs uppercase tracking-[0.24em] text-amber">Start a repair request</p>
+            <h2 className="mt-3 font-head text-3xl font-bold text-white sm:text-4xl">Something not working as it should?</h2>
+            <p className="mt-4 max-w-xl font-body text-slate-300">Send us the equipment details and symptoms. We&apos;ll let you know what information is needed next.</p>
+          </div>
+          <Link href="/book-repair" className="whitespace-nowrap bg-amber px-6 py-3 font-body text-sm font-medium text-ink hover:bg-white">Request an assessment</Link>
         </div>
       </section>
     </>
