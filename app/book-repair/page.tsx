@@ -2,13 +2,6 @@
 
 import { FormEvent, useState } from "react";
 import { businessInfo, services } from "@/lib/services";
-import { createPageMetadata } from "@/lib/seo";
-
-export const metadata = createPageMetadata(
-  "Request an Electronics Repair Assessment",
-  "Tell Atomic Vitality Tech Lab about your equipment fault and request a professional electronics repair assessment in Nairobi.",
-  ["request electronics repair Nairobi", "electronics repair assessment", "PCB repair quote Kenya", "book electronics repair"],
-);
 
 const whatsappNumber = "254710910088";
 
