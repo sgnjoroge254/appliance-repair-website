@@ -15,14 +15,13 @@ export default function Header() {
   const [open, setOpen] = useState(false);
 
   return (
-    <header className="sticky top-0 z-50 border-b border-white/10 bg-[#0f1d2b]/95 backdrop-blur">
+    <header className="sticky top-0 z-50 border-b border-steelline bg-steel/95 backdrop-blur">
       <div className="mx-auto flex max-w-6xl items-center justify-between px-6 py-3">
-        <Link href="/" className="flex items-center" onClick={() => setOpen(false)}>
-          <img
-            src="/atomic-vitality-logo.png"
-            alt={`${businessInfo.name} avatar`}
-            className="h-10 w-10 object-contain sm:h-12 sm:w-12"
-          />
+        <Link href="/" className="flex items-center gap-3" onClick={() => setOpen(false)}>
+          <img src="/logo.png" alt={businessInfo.name} className="h-20 w-20 object-contain sm:h-24 sm:w-24" />
+          <span className="font-head text-lg font-bold tracking-tight text-ink sm:text-xl">
+            {businessInfo.name}
+          </span>
         </Link>
 
         <nav className="hidden items-center gap-8 md:flex">
@@ -30,7 +29,7 @@ export default function Header() {
             <Link
               key={link.href}
               href={link.href}
-              className="font-body text-sm text-slate-200 transition-colors hover:text-white"
+              className="font-body text-sm text-ink/80 transition-colors hover:text-ink"
             >
               {link.label}
             </Link>
@@ -40,7 +39,7 @@ export default function Header() {
         <div className="hidden items-center gap-3 sm:flex">
           <Link
             href="/track-repair"
-            className="hidden font-mono text-xs text-slate-300 underline decoration-slate-500 underline-offset-4 hover:text-white sm:block"
+            className="hidden font-mono text-xs text-ink/70 underline decoration-steelline underline-offset-4 hover:text-ink sm:block"
           >
             Track Repair
           </Link>
@@ -55,7 +54,7 @@ export default function Header() {
         <button
           type="button"
           aria-label="Toggle menu"
-          className="flex h-9 w-9 items-center justify-center border border-white/20 text-white md:hidden"
+          className="flex h-9 w-9 items-center justify-center border border-steelline md:hidden"
           onClick={() => setOpen(!open)}
         >
           {open ? (
@@ -74,13 +73,13 @@ export default function Header() {
       </div>
 
       {open && (
-        <nav className="border-t border-white/10 bg-[#0f1d2b] px-6 py-4 md:hidden">
+        <nav className="border-t border-steelline bg-steel px-6 py-4 md:hidden">
           <ul className="space-y-4">
             {navLinks.map((link) => (
               <li key={link.href}>
                 <Link
                   href={link.href}
-                  className="block font-body text-sm text-slate-200"
+                  className="block font-body text-sm text-ink/80"
                   onClick={() => setOpen(false)}
                 >
                   {link.label}
@@ -88,7 +87,7 @@ export default function Header() {
               </li>
             ))}
             <li>
-              <Link href="/track-repair" className="block font-mono text-xs text-slate-300" onClick={() => setOpen(false)}>
+              <Link href="/track-repair" className="block font-mono text-xs text-ink/60" onClick={() => setOpen(false)}>
                 Track Repair
               </Link>
             </li>

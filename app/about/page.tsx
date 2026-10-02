@@ -1,13 +1,5 @@
 import Link from "next/link";
 import { businessInfo } from "@/lib/services";
-import SectionDivider from "@/components/SectionDivider";
-import { createPageMetadata } from "@/lib/seo";
-
-export const metadata = createPageMetadata(
-  "About Atomic Vitality Tech Lab",
-  "Learn about Atomic Vitality Tech Lab, a Nairobi electronics repair laboratory focused on careful diagnostics, component-level repair, and extending equipment life.",
-  ["about Atomic Vitality Tech Lab", "electronics repair lab Nairobi", "electronics technicians Kenya", "sustainable electronics repair"],
-);
 
 const specialties = [
   {
@@ -49,9 +41,9 @@ const distinctions = [
 export default function AboutPage() {
   return (
     <>
-      <section className="border-b border-amber/30 bg-gradient-to-br from-[#fff1d2] via-steel to-[#dff7f1] px-6 py-16">
+      <section className="border-b border-steelline bg-steel px-6 py-16">
         <div className="mx-auto max-w-3xl">
-          <p className="font-mono text-xs uppercase tracking-wide text-[#b66d00]">About</p>
+          <p className="font-mono text-xs uppercase tracking-wide text-ink/50">About</p>
           <h1 className="mt-3 font-head text-3xl font-extrabold text-ink sm:text-4xl">
             Revitalizing your technology
           </h1>
@@ -64,28 +56,22 @@ export default function AboutPage() {
         </div>
       </section>
 
-      <SectionDivider />
-
-      <section className="bg-[#f7fbfa] px-6 py-16">
-        <div className="mx-auto max-w-3xl">
-        <div className="grid gap-6 sm:grid-cols-2">
-          <div className="border-t-4 border-amber bg-[#fff8e8] p-6 shadow-sm">
-            <h2 className="font-head text-xl font-bold text-[#9b5b00]">Our mission</h2>
+      <section className="mx-auto max-w-3xl px-6 py-16">
+        <div className="grid gap-10 sm:grid-cols-2">
+          <div>
+            <h2 className="font-head text-xl font-bold text-ink">Our mission</h2>
             <p className="mt-3 font-body text-sm leading-relaxed text-ink/70">
               To save our clients time and money through unmatched component-level electronic repair and custom engineering solutions that extend the life of technology and reduce electronic waste.
             </p>
           </div>
-          <div className="border-t-4 border-[#15a6a0] bg-[#e9fbf7] p-6 shadow-sm">
-            <h2 className="font-head text-xl font-bold text-[#087b78]">Our vision</h2>
+          <div>
+            <h2 className="font-head text-xl font-bold text-ink">Our vision</h2>
             <p className="mt-3 font-body text-sm leading-relaxed text-ink/70">
               To be the most trusted and advanced electronics diagnostics and repair lab in the region — known for turning "unfixable" into "fully functional."
             </p>
           </div>
         </div>
-        </div>
       </section>
-
-      <SectionDivider />
 
       <section className="border-t border-steelline bg-steel px-6 py-16">
         <div className="mx-auto max-w-5xl">
@@ -95,7 +81,7 @@ export default function AboutPage() {
           </p>
           <div className="mt-8 grid gap-6 sm:grid-cols-3">
             {specialties.map((s) => (
-              <div key={s.title} className="border border-[#15a6a0]/30 bg-white p-6 shadow-sm transition hover:-translate-y-1 hover:border-[#15a6a0]">
+              <div key={s.title} className="border border-steelline bg-white p-6">
                 <span className="text-2xl">{s.icon}</span>
                 <h3 className="mt-3 font-head text-lg font-bold text-ink">{s.title}</h3>
                 <p className="mt-2 font-body text-sm leading-relaxed text-ink/70">{s.body}</p>
@@ -104,8 +90,6 @@ export default function AboutPage() {
           </div>
         </div>
       </section>
-
-      <SectionDivider />
 
       <section className="mx-auto max-w-5xl px-6 py-16">
         <h2 className="font-head text-2xl font-bold text-ink">Why choose {businessInfo.name}</h2>
@@ -119,8 +103,6 @@ export default function AboutPage() {
         </div>
       </section>
 
-      <SectionDivider />
-
       <section className="border-t border-steelline bg-steel px-6 py-16">
         <div className="mx-auto max-w-3xl">
           <h2 className="font-head text-xl font-bold text-ink">Our lab</h2>
@@ -131,8 +113,8 @@ export default function AboutPage() {
 
         <dl className="mx-auto mt-10 grid max-w-3xl grid-cols-2 gap-6 border-t border-steelline pt-10 sm:grid-cols-4">
           {[
-            ["Years in operation", "10"],
-            ["Repairs completed", "1000+"],
+            ["Years in operation", "1"],
+            ["Repairs completed", "50+"],
             ["Avg. turnaround", "2–3 days"],
             ["Warranty on repairs", "6 months"],
           ].map(([label, value]) => (
