@@ -9,11 +9,14 @@ export type Service = {
   image: string;
 };
 
+const whatsappNumber = "254710910088";
+
 export const businessInfo = {
   name: "Atomic Tech Lab",
   tagline: "Appliance repair, diagnostics, and electronics servicing you can trust",
   phone: "0710 910 088",
-  whatsappUrl: "https://wa.link/6tjkiv",
+  whatsappNumber,
+  whatsappUrl: `https://wa.me/${whatsappNumber}`,
   email: "info@atomictechlab.com",
   address: "Kang'ari Building, Luthuli Avenue, Nairobi CBD",
   hours: "Mon–Sat, 8:00 AM – 7:00 PM",

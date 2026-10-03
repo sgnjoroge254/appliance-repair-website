@@ -3,8 +3,6 @@
 import { FormEvent, useState } from "react";
 import { businessInfo, services } from "@/lib/services";
 
-const whatsappNumber = "254710910088";
-
 export default function BookRepairPage() {
   const [formData, setFormData] = useState({
     appliance: services[0].name,
@@ -30,7 +28,7 @@ export default function BookRepairPage() {
       `Phone: ${formData.phone || "Not provided"}`,
     ].join("\n");
 
-    const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(message)}`;
+    const whatsappUrl = `https://wa.me/${businessInfo.whatsappNumber}?text=${encodeURIComponent(message)}`;
     window.open(whatsappUrl, "_blank", "noopener,noreferrer");
   };
 

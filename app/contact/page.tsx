@@ -4,8 +4,6 @@ import { FormEvent, useState } from "react";
 import { businessInfo } from "@/lib/services";
 import SectionDivider from "@/components/SectionDivider";
 
-const whatsappNumber = "254710910088";
-
 export default function ContactPage() {
   const [formData, setFormData] = useState({
     name: "",
@@ -27,7 +25,7 @@ export default function ContactPage() {
       `Message: ${formData.message || "Not provided"}`,
     ].join("\n");
 
-    window.open(`https://wa.me/${whatsappNumber}?text=${encodeURIComponent(message)}`, "_blank", "noopener,noreferrer");
+    window.open(`https://wa.me/${businessInfo.whatsappNumber}?text=${encodeURIComponent(message)}`, "_blank", "noopener,noreferrer");
   };
 
   const sendViaEmail = (event: FormEvent) => {
